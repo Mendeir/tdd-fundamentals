@@ -18,6 +18,7 @@ describe("game of life", () => {
     describe("generate function", () => {
       test("should create an array of x * x", () => {
         expect(generate(1)).toEqual([0]);
+        expect(generate(2)).toEqual([0, 0, 0, 0]);
       });
     });
   });
