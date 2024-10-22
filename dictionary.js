@@ -3,11 +3,8 @@ function splitString(string) {
 }
 
 module.exports = function dictionary(words) {
-  const wordList = splitString(words) || []
-  const result = {}
-  wordList.forEach(word => {
-    result[word] = result[word] + 1 || 1
-  })
-
-  return result
+  return (splitString(words) || []).reduce((curr, next) => {
+    curr[next] = curr[next] + 1 || 1
+    return curr
+  }, {})
 }
