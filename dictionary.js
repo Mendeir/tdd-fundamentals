@@ -5,14 +5,9 @@ function splitString(string) {
 module.exports = function dictionary(words) {
   const wordList = splitString(words) || []
   const result = {}
-
-  if (wordList.length > 0) {
-    result[wordList[0]] = 1
-  }
-
-  if (wordList.length > 1) {
-    result[wordList[1]] = 2
-  }
+  wordList.forEach(word => {
+    result[word] = result[word] + 1 || 1
+  })
 
   return result
 }

@@ -10,4 +10,7 @@ describe('dictionary', () => {
   test('should count 2 for two words that are the same', () => {
     expect(dictionary('the the')).toEqual({ the: 2 })
   })
+  test('should count 3 for two words that are the same and 1 for different word', () => {
+    expect(dictionary('the cat the')).toEqual({ the: 2, cat: 1 })
+  })
 })
