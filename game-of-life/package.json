@@ -7,6 +7,9 @@
     "test": "jest --coverage",
     "dev": "jest --coverage --watch"
   },
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
