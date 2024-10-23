@@ -26,11 +26,35 @@ const countNeighbours = (cells, index) => {
   );
 };
 
-const regenerate = cells => cells.map(cell => isAlive(cell, 0));
+const regenerate = cells =>
+  cells.map((cell, index) => isAlive(cell, countNeighbours(cells, index)));
+
+const createElement = className => {
+  const element = document.createElement("div");
+  element.className = className;
+  return element;
+}
+
+const drawGrid = cells => {
+  const width = Math.sqrt(cells.length); grid = document.getElementById("grid");
+  const container = createElement("container");
+  let row;
+  cells.forEach((cell, index) => {
+    if (index % width === 0) {
+      row = createElement("row");
+      container.appendChild(row);
+    }
+    const cellEl = createElement(`cell ${cell === 0 ? "dead" : "live"}`);
+    row.appendChild(cellEl);
+  });
+  grid.innerHTML = "";
+  grid.appendChild(container);
+};
 
 window.game = {
   isAlive,
   generate,
   regenerate,
-  countNeighbours
+  countNeighbours,
+  drawGrid
 };
