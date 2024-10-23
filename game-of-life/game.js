@@ -51,10 +51,20 @@ const drawGrid = cells => {
     grid.appendChild(container);
 };
 
+const attachGridEventHandler = () => {
+    document.getElementById('grid').addEventListener('click', event => {
+        const className = event.target.className
+        event.target.className = className.includes('dead')
+            ? className.replace('dead', 'live')
+            : className.replace('live', 'dead')
+    })
+}
+
 window.game = {
     isAlive,
     generate,
     regenerate,
     countNeighbours,
-    drawGrid
+    drawGrid,
+    attachGridEventHandler
 };

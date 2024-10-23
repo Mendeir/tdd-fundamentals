@@ -1,5 +1,5 @@
 require("../game");
-const { isAlive, generate, regenerate, countNeighbours, drawGrid } = window.game;
+const { isAlive, generate, regenerate, countNeighbours, drawGrid, attachGridEventHandler } = window.game;
 
 describe("game of life", () => {
     describe("isAlive algorithm", () => {
@@ -77,5 +77,20 @@ describe("game of life", () => {
             });
         });
 
+        describe("event handler for grid", () => {
+            test("click on cell should toggle live/dead", () => {
+                document.body.innerHTML = '<div id="grid"></div>';
+                drawGrid([0]);
+                attachGridEventHandler();
+                expect(document.querySelectorAll(".dead").length).toEqual(1);
+                expect(document.querySelectorAll(".live").length).toEqual(0);
+                document.querySelector(".dead").click();
+                expect(document.querySelectorAll(".dead").length).toEqual(0);
+                expect(document.querySelectorAll(".live").length).toEqual(1);
+                document.querySelector(".live").click();
+                expect(document.querySelectorAll(".dead").length).toEqual(1);
+                expect(document.querySelectorAll(".live").length).toEqual(0);
+            });
+        });
     });
 });
