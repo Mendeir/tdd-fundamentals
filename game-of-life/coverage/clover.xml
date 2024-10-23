@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1729604098213" clover="3.2.0">
-  <project timestamp="1729604098214" name="All files">
-    <metrics statements="4" coveredstatements="4" conditionals="5" coveredconditionals="5" methods="2" coveredmethods="2" elements="11" coveredelements="11" complexity="0" loc="4" ncloc="4" packages="1" files="1" classes="1"/>
+<coverage generated="1729658989019" clover="3.2.0">
+  <project timestamp="1729658989019" name="All files">
+    <metrics statements="10" coveredstatements="10" conditionals="7" coveredconditionals="7" methods="7" coveredmethods="7" elements="24" coveredelements="24" complexity="0" loc="10" ncloc="10" packages="1" files="1" classes="1"/>
     <file name="game.js" path="C:\dev\codes\VSCode\JavaScript\tdd-fundamentals\game-of-life\game.js">
-      <metrics statements="4" coveredstatements="4" conditionals="5" coveredconditionals="5" methods="2" coveredmethods="2"/>
+      <metrics statements="10" coveredstatements="10" conditionals="7" coveredconditionals="7" methods="7" coveredmethods="7"/>
       <line num="1" count="1" type="stmt"/>
-      <line num="2" count="4" type="cond" truecount="5" falsecount="0"/>
-      <line num="4" count="2" type="stmt"/>
-      <line num="6" count="1" type="stmt"/>
+      <line num="2" count="9" type="cond" truecount="5" falsecount="0"/>
+      <line num="4" count="5" type="stmt"/>
+      <line num="6" count="2" type="stmt"/>
+      <line num="7" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="9" count="1" type="stmt"/>
+      <line num="10" count="2" type="stmt"/>
+      <line num="11" count="2" type="stmt"/>
+      <line num="18" count="5" type="stmt"/>
+      <line num="20" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
