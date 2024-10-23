@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1729680994792" clover="3.2.0">
-  <project timestamp="1729680994792" name="All files">
-    <metrics statements="42" coveredstatements="42" conditionals="19" coveredconditionals="19" methods="18" coveredmethods="18" elements="79" coveredelements="79" complexity="0" loc="42" ncloc="42" packages="1" files="1" classes="1"/>
+<coverage generated="1729681141734" clover="3.2.0">
+  <project timestamp="1729681141734" name="All files">
+    <metrics statements="43" coveredstatements="43" conditionals="19" coveredconditionals="19" methods="19" coveredmethods="19" elements="81" coveredelements="81" complexity="0" loc="43" ncloc="43" packages="1" files="1" classes="1"/>
     <file name="game.js" path="C:\dev\codes\VSCode\JavaScript\tdd-fundamentals\game-of-life\game.js">
-      <metrics statements="42" coveredstatements="42" conditionals="19" coveredconditionals="19" methods="18" coveredmethods="18"/>
+      <metrics statements="43" coveredstatements="43" conditionals="19" coveredconditionals="19" methods="19" coveredmethods="19"/>
       <line num="1" count="1" type="stmt"/>
       <line num="2" count="13" type="cond" truecount="5" falsecount="0"/>
       <line num="4" count="5" type="stmt"/>
@@ -46,6 +46,7 @@
       <line num="71" count="1" type="stmt"/>
       <line num="72" count="1" type="stmt"/>
       <line num="76" count="1" type="stmt"/>
+      <line num="78" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>

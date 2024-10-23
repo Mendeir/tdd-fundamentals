@@ -1,5 +1,5 @@
 require("../game");
-const { isAlive, generate, regenerate, countNeighbours, drawGrid, attachGridEventHandler, getCellsFromDom } = window.game;
+const { isAlive, generate, regenerate, countNeighbours, drawGrid, attachGridEventHandler, getCellsFromDom, stop } = window.game;
 
 describe("game of life", () => {
     describe("isAlive algorithm", () => {
@@ -121,6 +121,13 @@ describe("game of life", () => {
 
             jest.useRealTimers();
             jest.restoreAllMocks();
+        });
+
+        describe("stop function", () => {
+            test("stop should clear interval", () => {
+                game.stop();
+                expect(clearInterval).toHaveBeenCalled;
+            });
         });
 
     });

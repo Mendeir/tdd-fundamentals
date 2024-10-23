@@ -73,6 +73,8 @@ const start = () => {
     }, 500);
 };
 
+const stop = () => clearInterval(gameLoop);
+
 window.game = {
     isAlive,
     generate,
@@ -81,5 +83,6 @@ window.game = {
     drawGrid,
     attachGridEventHandler,
     getCellsFromDom,
-    start
+    start,
+    stop
 };
