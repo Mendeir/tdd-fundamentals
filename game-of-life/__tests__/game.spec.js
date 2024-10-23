@@ -30,6 +30,18 @@ describe("game of life", () => {
       test("should count 2 neighbours", () => {
         expect(countNeighbours([1, 1, 1, 0], 0)).toEqual(2);
       })
+      test("should count 2 neighbours", () => {
+        expect(countNeighbours([1, 1, 1, 0], 1)).toEqual(2);
+      })
+      test("should count 2 neighbours", () => {
+        expect(countNeighbours([1, 1, 1, 0], 2)).toEqual(2);
+      })
+      test("should count 3 neighbours", () => {
+        expect(countNeighbours([1, 1, 1, 0], 3)).toEqual(3);
+      })
+      test("should count 3 neighbours", () => {
+        expect(countNeighbours([1, 1, 1, 0, 0, 0, 0, 0, 0], 4)).toEqual(3);
+      })
     });
 
     describe("regenerate function", () => {

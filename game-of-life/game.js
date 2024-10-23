@@ -6,12 +6,23 @@ const generate = (root) => new Array(root * root).fill(0);
 const add = (...args) => args.reduce((accumulator, current) =>
   accumulator + (current || 0), 0)
 
+const leftColumnValues = (index, width, cells) =>
+  index % width
+    ? [cells[index - 1], cells[index - width - 1], cells[index + width - 1]]
+    : [];
+
+const rightColumnValues = (index, width, cells) =>
+  (index + 1) % width
+    ? [cells[index + 1], cells[index - width + 1], cells[index + width + 1]]
+    : [];
+
 const countNeighbours = (cells, index) => {
-  const width = Math.sqrt(cells.length)
+  const width = Math.sqrt(cells.length);
   return add(
-    cells[index + 1] +
-    cells[index + width] +
-    cells[index + width + 1]
+    cells[index - width],
+    cells[index + width],
+    ...leftColumnValues(index, width, cells),
+    ...rightColumnValues(index, width, cells)
   );
 };
 
