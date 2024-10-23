@@ -102,5 +102,26 @@ describe("game of life", () => {
             });
         });
 
+        describe("start function", () => {
+            jest.useFakeTimers();
+            jest.spyOn(global, 'setInterval');
+            document.body.innerHTML = '<div id="grid"></div>';
+
+            const getCellsFromDomSpy = jest.spyOn(game, "getCellsFromDom");
+            const regenerateSpy = jest.spyOn(game, "regenerate");
+            const drawGridSpy = jest.spyOn(game, "drawGrid");
+
+            game.start();
+            jest.runOnlyPendingTimers();
+
+            expect(setInterval).toHaveBeenCalled();
+            expect(getCellsFromDomSpy).toHaveBeenCalled();
+            expect(regenerateSpy).toHaveBeenCalled();
+            expect(drawGridSpy).toHaveBeenCalled();
+
+            jest.useRealTimers();
+            jest.restoreAllMocks();
+        });
+
     });
 });
